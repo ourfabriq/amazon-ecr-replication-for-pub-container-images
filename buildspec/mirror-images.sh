@@ -2,7 +2,7 @@
 # set -x
 
 AccountID=$(aws sts get-caller-identity | jq -r ".Account")
-ECR_DN="${AccountID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com.cn"
+ECR_DN="${AccountID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
 
 declare -A DOMAIN_MAP
 DOMAIN_MAP["quayio"]="quay"
